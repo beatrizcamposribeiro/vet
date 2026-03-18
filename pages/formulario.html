@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar Consulta - Clínica ÓnixVet</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <h1 class="clinic-name">Clínica ÓnixVet</h1>
+            <p class="tagline">CUIDAMOS DA SAÚDE DO SEU ANIMAL COM EXCELÊNCIA E AMOR</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <a href="/index.html" class="back-link">← Voltar ao Início</a>
+
+        <h2 class="section-title">MARCAR CONSULTA</h2>
+        
+
+        <div class="form-card">
+            <form id="consultaForm" novalidate>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nomeAnimal">🐾 Nome do Animal</label>
+                        <input type="text" id="nomeAnimal" name="nomeAnimal" placeholder="Ex: Bolinha" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nomeTutor">👤 Nome do Tutor</label>
+                        <input type="text" id="nomeTutor" name="nomeTutor" placeholder="Ex: João Silva" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contacto">📞 Contacto (Telefone ou Email)</label>
+                    <input type="text" id="contacto" name="contacto" placeholder="Ex: 912 345 678 ou email@exemplo.com" required>
+                </div>
+
+                <hr class="form-divider">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="diaConsulta">📅 Dia da Consulta</label>
+                        <input type="date" id="diaConsulta" name="diaConsulta" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="horaConsulta">🕐 Hora da Consulta</label>
+                        <select id="horaConsulta" name="horaConsulta" required>
+                            <option value="" disabled selected>Selecione a hora</option>
+                            <option>09:00</option>
+                            <option>09:30</option>
+                            <option>10:00</option>
+                            <option>10:30</option>
+                            <option>11:00</option>
+                            <option>11:30</option>
+                            <option>12:00</option>
+                            <option>14:00</option>
+                            <option>14:30</option>
+                            <option>15:00</option>
+                            <option>15:30</option>
+                            <option>16:00</option>
+                            <option>16:30</option>
+                            <option>17:00</option>
+                            <option>17:30</option>
+                            <option>18:00</option>
+                            <option>18:30</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr class="form-divider">
+
+                <div class="form-group">
+                    <label for="motivo">📋 Motivo da Consulta</label>
+                    <textarea id="motivo" name="motivo" placeholder="Descreva brevemente o motivo da consulta..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" id="btnSubmit">
+                    <span id="btnText">SUBMETER MARCAÇÃO</span>
+                </button>
+
+                <div class="success-banner" id="successBanner">
+                    Entraremos em contacto brevemente para confirmar a sua consulta.
+                </div>
+
+            </form>
+        </div>
+
+        <!-- LISTA DE MARCAÇÕES -->
+        <section class="marcacoes-section">
+            <h2 class="section-title">MARCAÇÕES SUBMETIDAS 
+                <span class="contador-badge" id="contadorMarcacoes">0</span>
+            </h2>
+
+            <div id="estadoVazio" class="estado-vazio">
+            🐾 Ainda não existem marcações. Preencha o formulário acima para agendar uma consulta.
+            </div>
+
+            <div id="listaMarcacoes" class="lista-marcacoes"></div>
+        </section>
+
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Clínica ÓnixVet · Rua António Salgueiro 123, São João da Madeira · (+351) 256 888 888</p>
+    </footer>
+
+    <script src="../js/formulario.js"></script>
+
+</body>
+</html>

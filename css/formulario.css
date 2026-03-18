@@ -1,0 +1,296 @@
+/* =====================
+   FORMULÁRIO - ÓnixVet
+   ===================== */
+
+.form-subtitle {
+    text-align: center;
+    color: #8551a9;
+    font-size: 0.95rem;
+    margin-top: -30px;
+    margin-bottom: 36px;
+}
+
+/* CARD DO FORMULÁRIO */
+.form-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    padding: 42px 44px;
+    box-shadow: 0 6px 30px rgba(139, 127, 199, 0.15);
+    border-top: 4px solid #8B7FC7;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+/* GRUPOS DE CAMPOS */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+/* LABELS */
+.form-card label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #8B7FC7;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* INPUTS, SELECT E TEXTAREA */
+.form-card input,
+.form-card select,
+.form-card textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #D5E0F5;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.97rem;
+    color: #2d3748;
+    background: linear-gradient(135deg, #f9f6ff 0%, #f0f5ff 100%);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    outline: none;
+}
+
+.form-card input::placeholder,
+.form-card textarea::placeholder {
+    color: #a0aec0;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+    border-color: #8B7FC7;
+    box-shadow: 0 0 0 3px rgba(139, 127, 199, 0.18);
+    background: #ffffff;
+}
+
+/* SELECT */
+.form-card select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238B7FC7' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-color: transparent;
+    padding-right: 38px;
+}
+
+.form-card select option {
+    background: #ffffff;
+    color: #2d3748;
+}
+
+/* TEXTAREA */
+.form-card textarea {
+    resize: vertical;
+    min-height: 110px;
+    line-height: 1.6;
+}
+
+/* DIVISOR */
+.form-divider {
+    border: none;
+    border-top: 1.5px solid #E6D5F5;
+    margin: 24px 0;
+}
+
+/* ESTADO DE ERRO */
+.form-card input.erro,
+.form-card select.erro,
+.form-card textarea.erro {
+    border-color: #FC8181;
+    box-shadow: 0 0 0 3px rgba(252, 129, 129, 0.2);
+}
+
+/* ESTADO DE ERRO com foco */
+.form-card input.erro:focus,
+.form-card select.erro:focus,
+.form-card textarea.erro:focus {
+    border-color: #FC8181;
+    box-shadow: 0 0 0 3px rgba(252, 129, 129, 0.2);
+}
+
+/* ESTADO VÁLIDO */
+.form-card input.valido,
+.form-card select.valido,
+.form-card textarea.valido {
+    border-color: #9ae6b4;
+    box-shadow: 0 0 0 3px rgba(154, 230, 180, 0.2);
+}
+
+/* ESTADO VÁLIDO com foco */
+.form-card input.valido:focus,
+.form-card select.valido:focus,
+.form-card textarea.valido:focus {
+    border-color: #9ae6b4;
+    box-shadow: 0 0 0 3px rgba(154, 230, 180, 0.2);
+}
+
+/* BOTÃO SUBMETER */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6B8DD6 0%, #7BC6A8 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(107, 141, 214, 0.35);
+    transition: background 0.5s ease, box-shadow 0.4s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+    transform: scale(1.02);
+    box-shadow: 0 6px 22px rgba(107, 141, 214, 0.45);
+}
+
+.btn-submit:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+/* Botão após submissão — muda para verde */
+.btn-submit.submetido {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+    cursor: default;
+}
+
+/* MENSAGEM DE SUCESSO */
+.success-banner {
+    display: none;
+    margin-top: 20px;
+    padding: 18px 22px;
+    background: linear-gradient(135deg, #f0fff4, #e6ffed);
+    border: 1.5px solid #9ae6b4;
+    border-radius: 12px;
+    text-align: center;
+    color: #276749;
+    font-weight: 600;
+    font-size: 0.97rem;
+    animation: fadeInUp 0.5s ease;
+}
+
+.success-banner.visivel {
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .form-card {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SECÇÃO DE MARCAÇÕES */
+.marcacoes-section {
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+.contador-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6B8DD6 0%, #7BC6A8 100%);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* ESTADO VAZIO */
+.estado-vazio {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    color: #718096;
+    font-size: 1rem;
+    border: 2px dashed #D5E0F5;
+}
+
+/* LISTA DE MARCAÇÕES */
+.lista-marcacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* CARD DE MARCAÇÃO */
+.marcacao-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid #7BC6A8;
+    overflow: hidden;
+    animation: fadeInUp 0.4s ease;
+}
+
+.marcacao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #f9f6ff 0%, #f0f5ff 100%);
+    border-bottom: 1px solid #E6D5F5;
+}
+
+.marcacao-id {
+    font-weight: 700;
+    color: #8B7FC7;
+    font-size: 0.95rem;
+}
+
+.marcacao-data-criacao {
+    font-size: 0.8rem;
+    color: #a0aec0;
+}
+
+.marcacao-body {
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.marcacao-body p {
+    font-size: 0.9rem;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+.marcacao-body p:last-child {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+    .marcacao-body {
+        grid-template-columns: 1fr;
+    }
+}
